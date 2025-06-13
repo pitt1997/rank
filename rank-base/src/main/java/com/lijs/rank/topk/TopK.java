@@ -1,6 +1,7 @@
 package com.lijs.rank.topk;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -27,6 +28,7 @@ public class TopK {
         // 遍历结束后，堆中即为Top-K元素。
         // 时间复杂度：O(n log K)，适合大规模数据
         PriorityQueue<Integer> minHeap = new PriorityQueue<>(k); // 小顶堆
+        PriorityQueue<Integer> minHeapA = new PriorityQueue<>(k, Comparator.reverseOrder()); // 小顶堆
         // PriorityQueue<Integer> minHeap = new PriorityQueue<>(k, (a, b) -> b - a); // 大顶堆
         for (int i = 0; i < arrK.length; i++) {
             if (minHeap.size() < k) {

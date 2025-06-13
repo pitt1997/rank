@@ -51,7 +51,7 @@ public class Sort {
     private static int partition(int[] arr, int left, int right) {
         // 双指针 ij
         int pV = arr[right];
-        int i = left; // i之前是基准左边
+        int i = left; // i之前是基准左边 不包含i这个位置 刚好就是交换i位置的值
         for (int j = left; j < right; j++) {
             if (arr[j] < pV) {
                 // 交换ij位置上的元素
