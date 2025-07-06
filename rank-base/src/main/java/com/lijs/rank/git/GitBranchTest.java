@@ -12,6 +12,7 @@ public class GitBranchTest {
         int i = 1;
         int c = 0;
         c++;
+        // 测试代码格式化
     }
 
 }
